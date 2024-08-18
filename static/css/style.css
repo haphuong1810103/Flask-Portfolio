@@ -141,6 +141,8 @@ body {
 }
 
 .profile-image {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 150px;
   border-radius: 50%;
   animation: bounce 1s infinite alternate;
@@ -160,9 +162,9 @@ body {
 
 .division {
   width: 100%;
-  height: 2px;
+  height: 1px;
   background-color: var(--card-background);
-  margin: 5.5rem 0;
+  margin: 1.5rem 0;
 }
 
 /* Projects */
@@ -332,9 +334,7 @@ body {
 
 /* Text Card */
 .textcard {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  border-radius: 5px;
   /* 5px rounded corners */
   padding: 10px;
 }
@@ -346,8 +346,8 @@ body {
 
 /* Add rounded corners to the top left and the top right corner of the image */
 img {
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* border-radius: 10px; */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
   height: auto;
 }
 
@@ -421,4 +421,60 @@ padding:12px;
     margin:10px 22px;
     font-size:2em;
     vertical-align:middle;
+}
+
+
+
+/* Work experience */
+
+
+
+h3 {
+  margin: 20px 0;
+}
+
+.experience {
+  border-left: 3px solid var(--bg-secondary);
+  padding: 0 30px;
+  margin-left: 185px;
+  @media (max-width: 767px) {
+    margin-left: 0;
+    padding-right: 0;
+  }
+  .item {
+    position: relative;
+    margin-bottom: 40px;
+    &::before {
+      @include round-btn(-43px, 0, 22px, 22px, $bgColor);
+      border: 3px solid var(--bg-secondary);
+    }
+    &::after {
+      @include round-btn(-37px, 6px, 10px, 10px, var(--bg-secondary));
+    }
+  }
+  .company-name {
+    color: #d6a41c;
+  }
+  .location {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    .fa {
+      margin-right: 8px;
+    }
+  }
+  .job-info {
+    position: absolute;
+    left: -220px;
+    top: 0;
+    .title {
+      color: #d6a41c;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    @media (max-width: 767px) {
+      position: static;
+      margin-bottom: 1.5rem;
+    }
+  }
 }

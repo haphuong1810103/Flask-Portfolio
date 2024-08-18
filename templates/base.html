@@ -6,15 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Primary Meta Tags -->
-    <title>{{ title }}</title>
+    <title>Ha Phuong Portfolio</title>
+    <link rel="icon" type="images/x-icon" href="https://i.postimg.cc/N0hWRt0j/avatar.jpg" />
 
-    <!-- Link -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://avatars.githubusercontent.com/u/56185972" />
-    <link rel="icon" type="image/png" sizes="16x16" href="https://avatars.githubusercontent.com/u/56185972" />
-    <link rel="icon" type="image/png" sizes="32x32" href="https://avatars.githubusercontent.com/u/56185972" />
-    <link rel="icon" type="image/png" sizes="192x192" href="https://avatars.githubusercontent.com/u/56185972" />
-    <link rel="icon" type="image/png" sizes="512x512" href="https://avatars.githubusercontent.com/u/56185972" />
-    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/56185972" />
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
@@ -28,17 +23,16 @@
             <div class="container">
                 <!-- Logo -->
                 <h1 id="logo">
-                    <a href="/"><img src="https://avatars.githubusercontent.com/u/56185972" alt="Logo" /></a>
+                    <a href="/"><img src="{{ url_for('static', filename='images/avatar.jpeg') }}" alt="Logo" /></a>
                 </h1>
 
                 <!-- Navbar links -->
                 <ul class="nav-menu">
-                    <li><a class="nav-link" href="{{ url_for('projects_page') }}">PROJECTS</a></li>
+                    <!-- <li><a class="nav-link" href="{{ url_for('projects_page') }}">PROJECTS</a></li> -->
                     <li><a class="nav-link" href="{{ url_for('contact_page') }}">CONTACT</a></li>
                     <!-- <li><a class="nav-link" href="#">BlOG</a></li> -->
                     <li>
-                        <a class="btn btn-primary" href="https://github.com/dmdhrumilmistry">RESUME <i
-                                class="fas fa-arrow-right"></i></a>
+                        <a class="btn btn-primary" href="{{ url_for('resume') }}">RESUME <i class="fas fa-arrow-right"></i></a>
                     </li>
 
                     <!-- Toggle switch -->
@@ -70,23 +64,20 @@
 
     <footer id="footer">
         <div class="container">
-            <a href="mailto:contact@dmdhrumilmistry.me">contact@dmdhrumilmistry.me</a>
+            <a href="mailto:haphuong@u.nus.edu">haphuong@u.nus.edu</a>
             <!-- Social links -->
             <div class="social">
-                <a href="https://twitter.com/dmdhrumilmistry"><img
-                        src="{{ url_for('static', filename='assets/twitter-icon.svg') }}" alt="Twitter"
-                        style="border-radius: 0px;"></a>
-                <a href="https://linkedin.com/in/dmdhrumilmistry"><img
+                <a href="https://www.linkedin.com/in/hapuong/"><img
                         src="{{ url_for('static', filename='assets/linkedin-icon.svg') }}" alt="Linkedin"
                         style="border-radius: 0px;"></a>
-                <a href="https://t.me/anyonymous_dude"><img
+                <a href="https://t.me/Puong2003"><img
                         src="{{ url_for('static', filename='assets/telegram.svg') }}" alt="Telegram"></a>
-                <a href="https://github.com/dmdhrumilmistry"><img
+                <a href="https://github.com/haphuong1810103"><img
                         src="{{ url_for('static', filename='assets/github-icon.svg') }}" alt="GitHub"
                         style="border-radius: 0px;"></a>
             </div>
             <!-- Attribution -->
-            <p>Copyright &copy; dmdhrumilmistry 2022, All rights reserved</p>
+            <p>Copyright &copy; haphuong 2024, All rights reserved</p>
         </div>
     </footer>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>

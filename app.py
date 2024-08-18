@@ -55,7 +55,7 @@ def err_404(message):
 
 @app.route('/')
 def main_page():
-    return render_template('index.html', title='Dhrumil Mistry - Homepage')
+    return render_template('index.html', title='Ha Phuong - Homepage')
 
 
 @app.route('/home')
@@ -87,3 +87,8 @@ def contact_page():
 @app.route('/projects')
 def projects_page():
     return render_template('projects.html', title="Projects", cards=get_projects())
+
+
+@app.route('/resume')
+def resume():
+    return render_template('resume.html')

@@ -16,7 +16,7 @@
 
 FROM ubuntu
 
-LABEL maintainer "Dhrumil Mistry <contact@dmdhrumilmistry.me>"
+LABEL maintainer "Ha Phuong <haphuong@u.nus.edu>"
 
 # install requirements
 RUN apt update -y && apt install python3 python3-pip -y
