@@ -13,13 +13,12 @@
 #   # run docker container
 #	docker run -d flask-portfolio
 #
-
-FROM ubuntu
+FROM python:3.10-slim-buster
 
 LABEL maintainer "Ha Phuong <haphuong@u.nus.edu>"
 
 # install requirements
-RUN apt update -y && apt install python3 python3-pip -y
+RUN apt update -y && apt install python python-pip -y
 
 # configure working directory
 WORKDIR /python-docker
@@ -34,7 +33,7 @@ COPY README.md /python-docker/README.md
 COPY LICENSE /python-docker/LICENSE
 
 # install project requirements
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 
 # expose docker port to host machine
 EXPOSE 8080
