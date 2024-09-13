@@ -89,6 +89,6 @@ def projects_page():
     return render_template('projects.html', title="Projects", cards=get_projects())
 
 
-@app.route('/resume')
-def resume():
-    return render_template('resume.html')
+# @app.route('/resume')
+# def resume():
+#     return render_template('resume.html')
